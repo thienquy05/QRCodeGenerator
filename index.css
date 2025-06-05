@@ -15,10 +15,16 @@ body {
     overflow: hidden;
 }
 .container {
+    width: auto;
+    height: auto;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
+}
+
+h1 {
+    font-size: 1.5rem;
 }
 .container input{
     margin-top: 1rem;
@@ -43,7 +49,7 @@ body {
     text-decoration: none;
     margin-top: 1rem;
     background-color: #1e90ff;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 10px;
     text-align: center;
     color: black;

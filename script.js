@@ -3,6 +3,7 @@ const input = document.getElementById("input");
 const qrContainer = document.getElementById("qr-code");
 const genBtn = document.getElementById("generate-btn");
 const dowBtn = document.getElementById("dowload-btn");
+const clrBtn = document.getElementById("clear-btn");
 
 let qr;
 
@@ -11,8 +12,10 @@ genBtn.addEventListener("click", () => {
     const text = input.value.trim();
 
     //If the input is empty -> send alert to user
-    if (!text) alert("Please enter text or link!");
-
+    if (!text) {
+        alert("Please enter text or link!");
+        dowBtn.style.display = "none";
+    }
     //Clear previous QR
     qrContainer.innerHTML = "";
 
@@ -33,3 +36,4 @@ genBtn.addEventListener("click", () => {
         }
     }, 300);
 });
+
